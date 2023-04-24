@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: calc(100vmax / 1600) * 100;
+  @media (max-width: 992px) {
+    font-size: 60px;
+  }
+}
+body {
+  min-height: 100vh;
+  @include flexCenter;
+  background: radial-gradient(circle, #ccc 10%, #0000 10%) repeat center / 25px 25px;
+  font-family: 'Kanit', sans-serif;
+  font-size: .26rem;
+  user-select: none;
+  text-align: center;
+}
+
+.header {
+  margin: .5rem auto;
+}
+
+.compress-text {
+  margin-top: .2rem;
+  span {
+    color: indianred;
+  }
+}
+
+.btn {
+  display: inline-block;
+  width: 2rem;
+  margin: 0 .1rem;
+  padding: .1rem;
+  border-radius: 5px;
+  border: 2px solid #333;
+  background-color: #f8f7f3;
+  box-shadow: 2px 2px 0 2px #333;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.preview {
+  min-width: 10rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: .3rem;
+  padding: .3rem;
+  border: 2px solid #000;
+  border-radius: 8px;
+  background-color: #fff;
+  .img-box {
+    flex: 1;
+  }
+  .title {
+    margin-bottom: .1rem;
+  }
+  img {
+    display: block;
+    max-width: 4.5rem;
+    background-color: #eee;
+    border-radius: 5px;
+  }
+}
